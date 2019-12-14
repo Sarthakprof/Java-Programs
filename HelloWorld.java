@@ -1,8 +1,8 @@
 import java.util.*;
 public class HelloWorld{
     public static void main(String arg[]) {
-        System.out.println("Hello World! My first java program!!");
+        System.out.println("Hello World! This is my first java program!!");
         Date date = new Date();
-        System.out.println("Todays date is " + date);
+        System.out.println("Today's date is " + date);
     }
 }
