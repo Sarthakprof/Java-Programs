@@ -21,3 +21,7 @@ Java platform:
           that is interpreted by JVM into machine code and that is run on actual platform.
     *FLOW: Java Application Code --> Java Compiler --> ByteCode --> JVM --> Machine Code --> Run in Hardware OS 
 
+Version and Editions:
+    - Java EE
+        - Java SE
+            -Java ME
