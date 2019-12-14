@@ -14,7 +14,7 @@ Java platform:
         - Java Virtual Machine JVM
         - Java API
 
-        -- both together known as 
+        -- both together known as JRE
     
     > Java Source Code is compiled as well as interpreted
         - Java compiler compiles source code to bytecode(intermediate code)
