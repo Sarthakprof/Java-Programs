@@ -25,3 +25,41 @@ Version and Editions:
     - Java EE
         - Java SE
             -Java ME
+
+Object Oriented Programming
+
+ - Class : Blueprint
+ - Objects : Real world entities
+
+ Features:
+  - Abstraction
+  - Inheritence
+  - Polymorphism
+  
+
+  Primitive Data Types
+    - byte 
+    - short
+    - int 
+    - long
+    - float
+    - double
+    - char
+    - boolean
+
+Objects v/s Primitive
+ - Objects have state and behaviour
+ - Primitives have only single value
+
+Instantiating an Object
+    String s = new String();
+    Circle c = new Circle();
+
+    Circle = Reference Types
+    c = referendce variable
+    new = keyworld
+    Circle() = Object type
+
+Memory Management - Stack and Heap
+    - In the memory managed by JVM behind the scenes,
+         object references and objects assigned to them are managed by Stacks and Heaps
