@@ -63,3 +63,27 @@ Instantiating an Object
 Memory Management - Stack and Heap
     - In the memory managed by JVM behind the scenes,
          object references and objects assigned to them are managed by Stacks and Heaps
+
+Objects contain data, data is stored in instance variables
+
+Instantian of an Object:
+    - Using new keyword
+    - When you Instante an Object with new Keyword you are actually reating a special method called Constructor
+    
+    Class X Instantes Point
+    Point point = new Point(2, 5);
+
+    Class Point 
+    public Class Point{
+        //Constructor
+         public Point(int p1, int p2){
+             x = p1;
+             y = p2;
+         }
+     }
+
+Constructor gives you flexibilty to pass any no. of parameters in int
+
+Customer c = new Customer(a, b, c)
+Customer c = new Customer();
+Customer c = new Customer(a, b);
