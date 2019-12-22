@@ -118,4 +118,25 @@ It is, however, legal (though uncommon) to just use the return statement.
 public void doSomething() {
     return;
 }
-As mentioned, it's pretty uncommon (and useless) to see a return like that on it's own... though it can be used to end a method inside of a control structure.
+As mentioned, it's pretty uncommon (and useless) 
+to see a return like that on it's own... though it can be used to end a method inside of a control structure.
+
+-> Building Constructors
+
+    - Constructors are special methods
+    - Constructor methods have the same name as th class itself
+    - Constructor look just like other methods but they have no return tyes not even void
+    - Constructors are invoked only by using the new keyword not the dot notation like methods
+    - You should use Constructors to initialize data
+
+public class Car{
+    String color;
+    String type;
+
+    Car(String c, String t){
+        color = c;
+        type = t;
+    }
+}
+
+Car car = new Car ("blue", "Lambhorghini")
