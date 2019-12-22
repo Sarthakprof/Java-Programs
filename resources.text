@@ -140,3 +140,66 @@ public class Car{
 }
 
 Car car = new Car ("blue", "Lambhorghini")
+
+Q:  What's the difference between a "default" and a "no-arg" constructor?
+
+A:  A "no-arg" constructor is one that lists no parameters (it takes no arguments).  A "default" 
+    constructor is a "no-arg" constructor that is created by the compiler, 
+    in the event that you don't explicitly create one yourself.
+
+-> Initialization Blocks
+{
+    //innitialization bock
+}
+
+//Example
+//Initialization Block Example
+public Class Ib{
+
+    String a = "A for apple";
+    String b = "B for ball";
+
+    {
+        a = "A for Airplane";
+    }
+
+    Ib (){
+        a = "A for Air"; 
+        a
+    }
+}
+
+a is asssignes "A for Apple" first then "A for Airplane" and then "A for Air"
+
+public Class Ib{
+
+    {
+        a = "A for Airplane";
+    }
+
+    String a = "A for apple";
+    String b = "B for ball";    
+
+    Ib (){
+        a = "A for Air"; 
+        
+    }
+}
+
+//a is asssigned "A for Apple" first then "A for Airplane" and then "A for Air"
+
+public Class Ib{
+
+    Ib (){
+        a = "A for Air";
+    }  
+    
+    String a = "A for apple";
+    String b = "B for ball";
+    
+    {
+        a = "A for Airplane";
+    }
+}
+
+//a is asssigned "A for Apple" first then "A for Airplane" and then "A for Air"
