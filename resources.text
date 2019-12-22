@@ -87,3 +87,23 @@ Constructor gives you flexibilty to pass any no. of parameters in int
 Customer c = new Customer(a, b, c)
 Customer c = new Customer();
 Customer c = new Customer(a, b);
+
+-> Creating Object Types
+    - An object type is called as Class
+    - A class is a template for object creation
+    - An object is really an instance of class
+    - Many object instances can be generated from the class
+
+    Note: Each file may only contain only one public top level class
+        * Other top level classes may be included in one file but they may not list an access modifier.(Encapsulation ref*)
+        //Good Exam Topic
+        public class HelloWorld{
+
+        }
+        class AHelperClass{
+
+        }
+
+        (Refer Car Class Example)
+
+        - Instance Variables are created before methods in Class.
