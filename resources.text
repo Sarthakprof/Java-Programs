@@ -107,3 +107,15 @@ Customer c = new Customer(a, b);
         (Refer Car Class Example)
 
         - Instance Variables are created before methods in Class.
+"Void"
+A method that declares a return type of void cannot return any value.  So, for example, the following is illegal and would not compile:
+
+public void doSomething() {
+    return "Hello!";
+}
+It is, however, legal (though uncommon) to just use the return statement.  
+
+public void doSomething() {
+    return;
+}
+As mentioned, it's pretty uncommon (and useless) to see a return like that on it's own... though it can be used to end a method inside of a control structure.
