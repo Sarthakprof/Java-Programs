@@ -1,11 +1,11 @@
  Java Intro- https://www.oracle.com/technetwork/java/intro-141325.html
  Features of Java:
-    - Onject Oriented
+    - Object Oriented
     - robust
     - secure
     - platform independent
     - high performing
-    - inerpreted
+    - interpreted
     - threaded
     - dynamic
 
@@ -33,8 +33,8 @@ Object Oriented Programming
 
  Features:
   - Abstraction
-  - Inheritence
-  - Polymorphism
+  - Inheritance
+  - Poly-Morphism
   
 
   Primitive Data Types
@@ -48,7 +48,7 @@ Object Oriented Programming
     - boolean
 
 Objects v/s Primitive
- - Objects have state and behaviour
+ - Objects have state and behavior
  - Primitives have only single value
 
 Instantiating an Object
@@ -56,8 +56,8 @@ Instantiating an Object
     Circle c = new Circle();
 
     Circle = Reference Types
-    c = referendce variable
-    new = keyworld
+    c = reference variable
+    new = keyword
     Circle() = Object type
 
 Memory Management - Stack and Heap
@@ -66,11 +66,11 @@ Memory Management - Stack and Heap
 
 Objects contain data, data is stored in instance variables
 
-Instantian of an Object:
+Instantiating of an Object:
     - Using new keyword
-    - When you Instante an Object with new Keyword you are actually reating a special method called Constructor
+    - When you Instance an Object with new Keyword you are actually re-creating a special method called Constructor
     
-    Class X Instantes Point
+    Class X Instantiates Point
     Point point = new Point(2, 5);
 
     Class Point 
@@ -82,7 +82,7 @@ Instantian of an Object:
          }
      }
 
-Constructor gives you flexibilty to pass any no. of parameters in int
+Constructor gives you flexibility to pass any no. of parameters in int
 
 Customer c = new Customer(a, b, c)
 Customer c = new Customer();
@@ -107,45 +107,48 @@ Customer c = new Customer(a, b);
         (Refer Car Class Example)
 
         - Instance Variables are created before methods in Class.
-"Void"
-A method that declares a return type of void cannot return any value.  So, for example, the following is illegal and would not compile:
-
-public void doSomething() {
-    return "Hello!";
-}
-It is, however, legal (though uncommon) to just use the return statement.  
-
-public void doSomething() {
-    return;
-}
+        
+        
+	"Void"
+	A method that declares a return type of void cannot return any value.  So, for example, the following is illegal and would not compile:
+	public void doSomething() {
+	    return "Hello!";
+	}
+	
+	It is, however, legal (though uncommon) to just use the return statement.
+	public void doSomething() {
+	    return;
+	}
+	
+	
 As mentioned, it's pretty uncommon (and useless) 
 to see a return like that on it's own... though it can be used to end a method inside of a control structure.
 
 -> Building Constructors
 
-    - Constructors are special methods
-    - Constructor methods have the same name as th class itself
-    - Constructor look just like other methods but they have no return tyes not even void
-    - Constructors are invoked only by using the new keyword not the dot notation like methods
-    - You should use Constructors to initialize data
-
-public class Car{
-    String color;
-    String type;
-
-    Car(String c, String t){
-        color = c;
-        type = t;
-    }
-}
-
-Car car = new Car ("blue", "Lambhorghini")
+	    - Constructors are special methods
+	    - Constructor methods have the same name as the class itself
+	    - Constructor look just like other methods but they have no return types not even void
+	    - Constructors are invoked only by using the new keyword not the dot notation like methods
+	    - You should use Constructors to initialize data
+	
+	public class Car{
+	    String color;
+	    String type;
+	
+	    Car(String c, String t){
+	        color = c;
+	        type = t;
+	    }
+	}
+	
+	Car car = new Car ("blue", "Lambhorghini")
 
 Q:  What's the difference between a "default" and a "no-arg" constructor?
 
-A:  A "no-arg" constructor is one that lists no parameters (it takes no arguments).  A "default" 
-    constructor is a "no-arg" constructor that is created by the compiler, 
-    in the event that you don't explicitly create one yourself.
+	A:  A "no-arg" constructor is one that lists no parameters (it takes no arguments).  A "default" 
+	    constructor is a "no-arg" constructor that is created by the compiler, 
+	    in the event that you don't explicitly create one yourself.
 
 -> Initialization Blocks
 {
@@ -154,52 +157,51 @@ A:  A "no-arg" constructor is one that lists no parameters (it takes no argument
 
 //Example
 //Initialization Block Example
-public Class Ib{
-
-    String a = "A for apple";
-    String b = "B for ball";
-
-    {
-        a = "A for Airplane";
-    }
-
-    Ib (){
-        a = "A for Air"; 
-        a
-    }
-}
-
-a is asssignes "A for Apple" first then "A for Airplane" and then "A for Air"
-
-public Class Ib{
-
-    {
-        a = "A for Airplane";
-    }
-
-    String a = "A for apple";
-    String b = "B for ball";    
-
-    Ib (){
-        a = "A for Air"; 
-        
-    }
-}
-
-//a is asssigned "A for Apple" first then "A for Airplane" and then "A for Air"
-
-public Class Ib{
-
-    Ib (){
-        a = "A for Air";
-    }  
-    
-    String a = "A for apple";
-    String b = "B for ball";
-    
-    {
-        a = "A for Airplane";
-    }
-}
-
-//a is asssigned "A for Apple" first then "A for Airplane" and then "A for Air"
+	public Class Ib{
+	
+	    String a = "A for apple";
+	
+	    {
+	        a = "A for Airplane";
+	    }
+	
+	    Ib (){
+	        a = "A for Air"; 
+	        a
+	    }
+	}
+	
+	//a is assigned "A for Apple" first then "A for Airplane" and then "A for Air"
+	
+	public Class Ib{
+	
+	    {
+	        a = "A for Airplane";
+	    }
+	
+	    String a = "A for apple";
+	    String b = "B for ball";    
+	
+	    Ib (){
+	        a = "A for Air"; 
+	        
+	    }
+	}
+	
+	//a is assigned "A for Apple" first then "A for Airplane" and then "A for Air"
+	
+	public Class Ib{
+	
+	    Ib (){
+	        a = "A for Air";
+	    }  
+	    
+	    String a = "A for apple";
+	    String b = "B for ball";
+	    
+	    {
+	        a = "A for Airplane";
+	    }
+	}
+	
+	//a is assigned "A for Apple" first then "A for Airplane" and then "A for Air"
