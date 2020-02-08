@@ -205,3 +205,142 @@ Q:  What's the difference between a "default" and a "no-arg" constructor?
 	}
 	
 	//a is assigned "A for Apple" first then "A for Airplane" and then "A for Air"
+	
+	
+	
+	*************** SECTION 4: Static, Scope and Garbage Collection ***************
+	
+	***********Static Variables ************	
+	- Data associated with the class instead of the object is stored in class variables(versus instance varables for objects or instances)
+	- Class variables are also called static variables
+	- They are called Static variables because the static keyword is used to identify them
+	
+	- TO access the static variable you use the name of the class and the class variable name
+			public class Car{
+				static int carCount;
+				Car.carCount = 1;
+				}
+				
+	- Oddly, you can use either the class name (Car) or the object reference of that type to access class variables
+	
+			Car myCar = new Car('Black', 'Ranger');
+			myCar.carCount = 1;
+			
+
+	******************Static Methods*******************
+	
+	- A static method just like the static variables is associate wth the class and not the objects(instances)
+	- Static methods are called class methods
+	- To call a non-static method that is instance you can call via class object.
+	- But to call class methods that is static method
+	
+	static void resetCarCount(){
+		carCount = 0;
+		//resets car count to 0
+		
+	}
+	
+	Now to call class/static method you can just use class name
+	
+	Car c = new Car();
+	c.resetCarCount(); //Legal but confusing
+	Car.resetCount(); //Proper way to call class/static methods
+	
+	
+	- Static methods do have access to any instance or object data
+	carCount++;
+		 serialNumber = carCount;
+		 
+		 color = "blue" //wrong as color is the instance variable
+		 
+		 
+  Q: What is the point of using static methods???
+  A: They generally have two purpose:
+  		1. They are used to access(update & fetch) class variables data
+  			- Although this can be done by any instance of the class. It is considered more appropiate to use the class or static methods for this purpose
+  			- 
+  		2. Static methods provide funtionality without the need for an object /instance 
+  		 	- FOr ex: maths formulas are great reasons to have static methods
+  		 	
+  		 	
+-> Static Reference variables and null!!!
+  
+  -If the reference variable you are working with has a null value
+   (meaning it is not referring to an object), it's in a dangerous state. 
+  - Specifically, if you access an instance member with it, you will see the dreaded "NullPointerException."
+	This is an exception created by the JVM and unless special exception handling code is written, will result in your program quitting prematurely
+  
+			  //null pointer exception
+			  public static void main(String[] args) {
+			    String s = null;
+			    s = s.toUpperCase(); // Oops! s is null! 
+				}
+			  
+			  public static void main(String[] args) {
+			    Math m = null;
+			    double result = m.floor(28.15); // Confusing code, but it works.
+				}
+			
+			//CORRECT WAY
+			public static void main(String[] args) {
+				    double result = Math.floor(28.15);
+				}
+				
+				
+->Static Initialization Block
+
+	static{
+	  //code
+	}
+	
+	static initialization block will executed once only when object is initialized
+	while regular initialization block is executed everytime a object is initialized
+	
+	static initiaaliztion block cannot access instance variables like static methods 
+	but it can access class/static variables
+	
+	
+	
+-> Example
+		public class Person {
+		    {
+		        personCount = 10;
+		    }
+		    static {
+		        personCount = 20;
+		    }
+		    private static int personCount = 1000;
+		    {
+		        personCount = 30;
+		    }
+		    static {
+		        personCount = 40;
+		    }
+		    public static void main(String[] args) {
+		       System.out.println(Person.personCount); // Line A 
+		       Person p = new Person(); // Line B
+		       System.out.println(Person.personCount); // Line C
+		       Person.personCount = 100; // Line D 
+		       p = new Person(); // Line E
+		       System.out.println(Person.personCount); // Line F
+		    }
+		}
+		When the program starts and this main method is kicked off, the Person class is loaded.  This, in turn, makes the static personCount variable available, with a default value of 0 (remember, all instance and static variables start with default values).
+		Next all of the static initialization blocks, and the static variable's explicit initialization are executed in the order they are listed, from top to bottom.  Therefore, the personCount variable is set to 20, 1000, and finally 40.  So Line A prints "40."
+		On Line B, an object is instantiated, so that causes the instance initialization blocks to be executed in the order they are listed, from top to bottom.  So now personCount is changed to 10 and finally 30.  Line C prints the value "30."
+		Line D changes the personCount to 100, but Line E causes the instance initialilzation blocks to be executed again.  Therefore, the final value printed in Line F is, once again, "30."  So the answer to the quiz is: 
+		//OUTPUT:
+		40
+		
+		30
+		
+		30
+
+
+
+
+			
+  
+	
+				
+				
