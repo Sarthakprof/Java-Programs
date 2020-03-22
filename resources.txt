@@ -335,6 +335,17 @@ Q:  What's the difference between a "default" and a "no-arg" constructor?
 		30
 		
 		30
+		
+		
+************This variable ********************
+
+The various usages of 'THIS' keyword in Java are as follows:
+
+It can be used to refer instance variable of current class
+It can be used to invoke or initiate current class constructor
+It can be passed as an argument in the method call
+It can be passed as argument in the constructor call
+It can be used to return the current class instance
 
 
 
