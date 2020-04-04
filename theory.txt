@@ -211,7 +211,7 @@ Q:  What's the difference between a "default" and a "no-arg" constructor?
 	*************** SECTION 4: Static, Scope and Garbage Collection ***************
 	
 	***********Static Variables ************	
-	- Data associated with the class instead of the object is stored in class variables(versus instance varables for objects or instances)
+	- Data associated with the class instead of the object is stored in class variables(versus instance variables for objects or instances)
 	- Class variables are also called static variables
 	- They are called Static variables because the static keyword is used to identify them
 	
@@ -229,7 +229,7 @@ Q:  What's the difference between a "default" and a "no-arg" constructor?
 
 	******************Static Methods*******************
 	
-	- A static method just like the static variables is associate wth the class and not the objects(instances)
+	- A static method just like the static variables is associate with the class and not the objects(instances)
 	- Static methods are called class methods
 	- To call a non-static method that is instance you can call via class object.
 	- But to call class methods that is static method
@@ -257,9 +257,9 @@ Q:  What's the difference between a "default" and a "no-arg" constructor?
   Q: What is the point of using static methods???
   A: They generally have two purpose:
   		1. They are used to access(update & fetch) class variables data
-  			- Although this can be done by any instance of the class. It is considered more appropiate to use the class or static methods for this purpose
+  			- Although this can be done by any instance of the class. It is considered more appropriate to use the class or static methods for this purpose
   			- 
-  		2. Static methods provide funtionality without the need for an object /instance 
+  		2. Static methods provide functionality without the need for an object/instance 
   		 	- FOr ex: maths formulas are great reasons to have static methods
   		 	
   		 	
@@ -294,9 +294,9 @@ Q:  What's the difference between a "default" and a "no-arg" constructor?
 	}
 	
 	static initialization block will executed once only when object is initialized
-	while regular initialization block is executed everytime a object is initialized
+	while regular initialization block is executed every time a object is initialized
 	
-	static initiaaliztion block cannot access instance variables like static methods 
+	static initialization block cannot access instance variables like static methods 
 	but it can access class/static variables
 	
 	
@@ -328,7 +328,7 @@ Q:  What's the difference between a "default" and a "no-arg" constructor?
 		When the program starts and this main method is kicked off, the Person class is loaded.  This, in turn, makes the static personCount variable available, with a default value of 0 (remember, all instance and static variables start with default values).
 		Next all of the static initialization blocks, and the static variable's explicit initialization are executed in the order they are listed, from top to bottom.  Therefore, the personCount variable is set to 20, 1000, and finally 40.  So Line A prints "40."
 		On Line B, an object is instantiated, so that causes the instance initialization blocks to be executed in the order they are listed, from top to bottom.  So now personCount is changed to 10 and finally 30.  Line C prints the value "30."
-		Line D changes the personCount to 100, but Line E causes the instance initialilzation blocks to be executed again.  Therefore, the final value printed in Line F is, once again, "30."  So the answer to the quiz is: 
+		Line D changes the personCount to 100, but Line E causes the instance initialization blocks to be executed again.  Therefore, the final value printed in Line F is, once again, "30."  So the answer to the quiz is: 
 		//OUTPUT:
 		40
 		
@@ -371,6 +371,29 @@ Local variables are not always method variables:
 
 
 
+***************Garbage Collection****************
+
+The JRE manages memory for you!
+	- you nevr have to destroy an object or manage the memory it uses
+	- the JRE deletes the object when it determines that they are no longer used. This process is known as garbage collection.
+	- JRE's GC periodically searches memory for free objects that are no longer needed
+	- When it finds one, it removes from the Heap
+	Example:
+	
+	Customer c = new Customer("ABCD");
+	c = new Customer("XYZQ");//here the garbage collector will remove the memory for "ABCD" customer as it is no longer needed
+	
+     or 
+     
+    MyCar myCar = new MyCar();
+    myCar = null;
+    //so now the myCar object is eligible for Garbage collection
+    
+**************Java Memory Leaks*********************
+
+A Memory Leak is a situation when there are objects present in the heap that are no longer used, but the garbage collector is unable to remove them from memory and, thus they are unnecessarily maintained. A memory leak is bad because it blocks memory resources and degrades system performance over time.
+So sometimes you manually remove them like setting object as null
+myCar = null;
 
 			
   
