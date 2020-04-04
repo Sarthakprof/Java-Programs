@@ -1,3 +1,4 @@
+package com.sarthak.concept.basicexample;
 public class StringObjects {
     public static void main(String[] args) {        
         String s = new String("Hello World  ");
