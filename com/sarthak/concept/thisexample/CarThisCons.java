@@ -15,6 +15,7 @@ public class CarThisCons {
 	}
 	
 	CarThisCons(String a, String b){
+		//this(); --recursive invovcation would occur!
 		this.a = a;
 		this.b = b + this.b;
 		String conct = this.a + this.b;

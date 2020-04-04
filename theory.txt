@@ -8,7 +8,7 @@
     - interpreted
     - threaded
     - dynamic
-
+ 
 Java platform:
     > Two Components:
         - Java Virtual Machine JVM
@@ -346,6 +346,28 @@ The various usages of 'THIS' keyword in Java are as follows:
 	It can be passed as an argument in the method call
 	It can be passed as argument in the constructor call
 	It can be used to return the current class instance
+	
+	--check examples in code
+
+*************SCOPE***************************
+
+Variables and methods have certain range in which they exist and where they can accessed
+	- and this concept here is called scope
+	- there are different levels of scope
+	- scope pertains to where data exists
+	- scope can easily be identified with the curly brackets or code blocks
+	
+You have seen a number of different locations for variables so far:
+	- inside of a class - //Instance Variables
+	- inside of a class but declared as static - //Static variables
+	- inside of a method (as parameters) -//SLocal Variables
+	
+Local variables are not always method variables:
+	- Local variables can be inside for() loops, if() stmts, etc.
+	- Sometimes variables are described a "most-local" or "local-most" , meaning that it is nearest variables of a given name regardless of scope.
+	
+	
+	
 
 
 
