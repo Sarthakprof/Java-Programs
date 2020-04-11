@@ -395,6 +395,26 @@ A Memory Leak is a situation when there are objects present in the heap that are
 So sometimes you manually remove them like setting object as null
 myCar = null;
 
+**************Packages*********************
+- Packaging is way to organize your class.
+Uses of Packages:
+	- makes it easier to use classes, interfaces, enums
+	- avoids naming conflicts
+	- help control access to code
+- Think of package as code folder
+
+The astrik * in the import can be used only to specify all the classees within a package.
+import transport.A* // won;t compile
+import.java.* //wont import anything
+import.java.util.* //works
+
+--you cannot use astrik with package stmt like "package com.abc.xyz.*" //won't copile
+
+
+
+
+
+
 			
   
 	
