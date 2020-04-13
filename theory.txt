@@ -410,9 +410,64 @@ import.java.util.* //works
 
 --you cannot use astrik with package stmt like "package com.abc.xyz.*" //won't copile
 
+****************Primitive Data Types******************
+- There are 8 primitive Data types:
+	Integer types: byte, short, int, long
+	Floating types: float, double
+	Boolean types: boolean
+	Character types: char
+	
+	Declaration: 
+	byte b;
+	char c;
+	int a;
+	
+Boolean:
+	1. can have either true or false. The values true and false are boolean literals
+	2. boolean cannot be converted directly into any other types
+	boolean b = true;
+	if(b){
+	//logic
+	}else{
+	//logic
+	}
+	
+Character(1 bit) types:
+	1. A character is a unicode text character
+	2. To support unicode, the java character is 16 bits
+	3. ASCII is a subset of unicode. The last 8 bits of unicode represent ASCII if the first 8 bits are 0
+	There are three different types of character literals:
+	1. The simple 'type' a is literal char in java
+	2. The escape characters '\n', '\t', and '\\' are characters in java. These represent new line, tab and backslash.
+	3. Hex notation can be used to represent characters that are not used in the keyboard
+	4. The format is '\uXXXX' where he X's represnt hexadecimal numbers. This way you can assign all 16 bits of the char. 
+	For ex: '\u0061' is the character 'a'
 
-
-
+Integer Types:
+	1. byte is 8 bits. In java it can hold from -2^2 to 2^7-1
+	2. short is 16 bits. (-2^15 to 2^15-1)
+	3. int is 32 bits. (-2^31 to 2^31-1)
+	4. long is 64 bits (-2^63 t0 2^63-1)
+	
+	myInt = 070; //70 octal is 56 in decimal notation
+	octal numbers start from 0
+	Binary (in Java 7)
+	int myInt = 0b101; //101 binary is 5 in decimal
+	Underscores
+	Also as of java 7, underscores can be used in numeric literals to help the readabilty of code
+	Underscore help in readability of values
+	int a = 1234567
+	int a = 1_234_567
+	
+	int a = 30.210 //legal
+	int a = 30._210 //illegal
+	int a = 30.210_ //illegal
+	int a = 30_.210 //illegal
+	int a = 30_210.50 //legal
+	
+	**********************Primitive Conversion****************
+	
+	
 
 
 			
