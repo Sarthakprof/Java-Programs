@@ -4,7 +4,7 @@ package com.sarthak.concept.syntaxes;
  * @author SARTHAK
  *
  */
-public class Basics {
+public class OperatorsBasics {
 	
 	public static void main(String args[]) {
 		
