@@ -3,6 +3,8 @@ package com.sarthak.concept.syntaxes;
 /**
  * @author SARTHAK
  *
+ * CODITIONS - IF-ELSE-IF, SWITCH CASE
+ * OPERATORS - TERNARY, INCREMENT, PRECEDENCE
  */
 public class OperatorsBasics {
 	
