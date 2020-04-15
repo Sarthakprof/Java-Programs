@@ -467,8 +467,32 @@ Integer Types:
 	
 	**********************Primitive Conversion****************
 	
-	
-
+    byte v =(int)50;
+    
+    *********************Operators, Loops and Syntax**************
+    if else if
+    switch case
+    enums
+    while loop
+    do-while loop
+    for loop
+    labels
+    break
+    continue
+    increment opereator/decrement operator
+    precedence operator
+    
+    check code for examples
+    
+    ******************* Strings*********************
+    
+   Strings are java objects
+   String s = new String("Hello"); // new object is created in heap of array of chars everytime object is create referring to samr string
+      or
+   String s = "Hello"; //only once in heap
+   
+   
+    
 
 			
   
