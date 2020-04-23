@@ -26,6 +26,19 @@ public class StringExamples {
 		// '+' operator concatanates strings
 		System.out.println(s + "is a software developer"); // Sarthak Srivastava is a software developer
 		
+				//normal concatenation
+		String str = "Hello";
+		str += " World";
+		str += ", today is Thursday!";
+		
+		System.out.println(str);
+		
+		// With String Builder, using immutable strings
+		StringBuilder strs = new StringBuilder();
+		strs.append("Hello ");
+		strs.append("World, today is thursday");
+		
+		System.out.println(strs);
 	}
 
 }
