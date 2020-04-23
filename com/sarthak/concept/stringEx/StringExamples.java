@@ -36,7 +36,8 @@ public class StringExamples {
 		// With String Builder, using immutable strings
 		StringBuilder strs = new StringBuilder();
 		strs.append("Hello ");
-		strs.append("World, today is thursday");
+		strs.append("World,");
+		strs.append(" today is thursday");
 		
 		System.out.println(strs);
 	}
