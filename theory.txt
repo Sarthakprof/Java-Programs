@@ -486,10 +486,20 @@ Integer Types:
     
     ******************* Strings*********************
     
-   Strings are java objects
+  Strings are java objects
    String s = new String("Hello"); // new object is created in heap of array of chars everytime object is create referring to samr string
       or
    String s = "Hello"; //only once in heap
+   
+   Strings are immutable!
+    - 	reassignment of String Object references creates a lot of "garbage objects"
+    - This is why we can use StringBuilder and StringBuffer classes
+    when an application needs to manipulate a lot of strings
+    - StringBuilder and StringBuffer (both java.lang) provide a mutable
+    sequence of characters but without the fancy String literals and Operators
+    - StringBuffer is thread-safe whereas StringBuilder is not thread-safe! once in heap
+
+
    
    
     
