@@ -500,7 +500,13 @@ Integer Types:
     - StringBuffer is thread-safe whereas StringBuilder is not thread-safe! once in heap
 
 
-   
+  *******************Passing By Value********************
+  
+  - All the variables in Java are passed by Value
+  - A primitive passed buy values means a copy of primitive is made
+  - An Object passed by value means a copy of the reference is made
+  - check PassbyValue.java example in project code
+  
    
     
 
