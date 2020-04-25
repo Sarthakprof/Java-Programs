@@ -507,6 +507,15 @@ Integer Types:
   - An Object passed by value means a copy of the reference is made
   - check PassbyValue.java example in project code
   
+  **************Encapsulation / Data Hiding******************
+  
+  - Encapsulation and /or data hiding are terms in OOPS are often used interchangeably
+  - Encapsulation s the technique of bundling data with methods that operate on that data
+  - Data hiding is bundling classes such that direct access from an object's data is prohibited except through encapsulating methods
+  - In Java, the modifiers public and private are most commonly used means to control access
+  - With encapsulation/data hiding, data stored in the object is hidden or private while using public methods
+  to manipulate the data
+  
    
     
 
