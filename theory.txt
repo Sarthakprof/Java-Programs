@@ -560,7 +560,18 @@ public void setNumber(int num) {
     this.number = num;
 }
 That ensures the value of number is always set between 10 and 100
-  
+
+
+ACCESS MODIFIERS
+
+- PUBLIC
+	- access is not limited
+- PRIVATE
+	- Acces is only allowed by the declaring class
+- PROTECTED
+	- Access is allowed by the declaring class, any class in the same package, and any extending class(of any package)
+- DEFAULT
+  - Access is allowed by the declaring class and from any class in the same package
    
     
 
