@@ -516,6 +516,51 @@ Integer Types:
   - With encapsulation/data hiding, data stored in the object is hidden or private while using public methods
   to manipulate the data
   
+  GETTER and SETTERS
+  
+  In Java, getter and setter are two conventional methods that are used for retrieving and updating value of a variable.
+
+The following code is an example of simple class with a private variable and a couple of getter/setter methods:
+
+public class SimpleGetterAndSetter {
+    private int number;
+ 
+    public int getNumber() {
+        return this.number;
+    }
+ 
+    public void setNumber(int num) {
+        this.number = num;
+    }
+}
+The class declares a private variable, number. Since number is private, code from outside this class cannot access the variable directly, like this:
+
+SimpleGetterAndSetter obj = new SimpleGetterAndSetter();
+obj.number = 10;    // compile error, since number is private
+int num = obj.number; // same as above
+Instead, the outside code have to invoke the getter, getNumber() and the setter, setNumber() in order to read or update the variable, for example:
+
+
+SimpleGetterAndSetter obj = new SimpleGetterAndSetter();
+ 
+obj.setNumber(10);  // OK
+int num = obj.getNumber();  // fine
+
+So, a setter is a method that updates value of a variable. And a getter is a method that reads value of a variable.
+
+Getter and setter are also known as accessor and mutator in Java.
+
+By using getter and setter, the programmer can control how his important variables are accessed and updated in a correct manner, 
+such as changing value of a variable within a specified range. Consider the following code of a setter method:1
+
+public void setNumber(int num) {
+    if (num < 10 || num > 100) {
+        throw new IllegalArgumentException();
+    }
+    this.number = num;
+}
+That ensures the value of number is always set between 10 and 100
+  
    
     
 
