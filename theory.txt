@@ -625,6 +625,20 @@ public void driveLikeDad() {
 
 *****************Method Overloading*********************
 
+- Java allows you to use same name for any number of methods
+- this is called method overloading
+- the signature must be unique, that the name and parameter(number & type) of method must be unique to do overloading
+- return type of method does not make any different, only method name and params and params return type and params order\
+
+below is unique
+public static void sayHello(String fName. int age){...)
+public static int sayHello(String lName){...}
+
+below is unique
+public static void sayHello(String fName. int age){...)
+public static int sayHello(int age, String lName){..)
+
+
 
 
 
