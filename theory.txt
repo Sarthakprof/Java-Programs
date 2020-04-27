@@ -704,6 +704,19 @@ Consider a whosMyAncester() method below:
 specific type of return than the one declared in the overridden method
 
 	Father dad = fatherRegistry.whosMyAncester("111111")
+	
+	
+****************************FINAL*******************************
+The three faces of "final" 
+	 - The modifier final means "unable to change"
+	 - Final can be used for three different things:
+	 	- Final before a variable makes the variable a constant
+	 	- Final before a method makes it so the method cannot be overridden
+	 	- Final before a class makes that class un-extendable
+	 	
+	 	
+	 	
+	 	
  	
  	
 
