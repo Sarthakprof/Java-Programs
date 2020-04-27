@@ -638,7 +638,74 @@ below is unique
 public static void sayHello(String fName. int age){...)
 public static int sayHello(int age, String lName){..)
 
+****************Method Overriding************************
+- Overriding is changing the definition/functionality of a method a class inherits
+- To override a method , the method must have the same signature
+- In other words, the name and params of the the overriding method must be exactly the same as the overriden method
+- If the method names are same but params are different then your overloading the method rather than overriding the method 
+- You can override the parents clas method
 
+rules- 
+ 	- The return type must be the same or a subtype of the overridden return type
+ 	- An overriding method cannot be less accessible than the inherited method (same or more access modifier)
+ 	// wrong example
+ 	// the method drive in SOn class is not public and class son is less accessible too
+ 	public class Father {
+ 	 	public void driver(){...} 	
+ 	}
+ 	
+ 	class Son extends Father {
+ 		void drive(){...}
+ 	}
+ 	
+ 	// corrected example
+ 	public class Father {
+ 	 	public void driver(){...} 	
+ 	}
+ 	
+ 	public class Son extends Father {
+ 		public void drive(){...}
+ 	}
+ 	
+ Rules of Overriding methods:
+ 
+ - Overriding methods cannot declare additional exceptions than declared in the overriden method.
+ UNLESS, the new exceptions are either a subtype of one of the overridden exceptions or is a "runtime" exception
+ 
+ - static and private methods cannot be overridden (that is why father static is called in Tester example in code)
+
+ - What if an instance of the Son wants or needs to drive like an instance of Father?
+ 	- The super keyword can also be used to call on the super class's method's
+ 	
+ 	class Son extends Father{
+ 	public void drive() {...}
+ 	public void driveLike Dad() {...}{
+ 	
+ 	super.drive(); / calls on the Father drive() method
+ 	}
+ 	
+ 	super.super..drive() is WRONG - you can only have one super!
+ 	
+******************Covariant Returns****************
+Consider a whosMyAncester() method below:
+	public class GrandFatherRegistry{
+		public GranFather whosMyAncester(String son) {...}
+	}
+	
+- An Covariant return is where a subtype is listed in the place of the supertype
+	- Overridden methods may use a covariant return
+	- For Example, an overridden method may be declared a shown below:
+	
+	public class FatherRegistry extends GrandFatherRegistry{
+		public Father whosMyAncester(String son) {...}
+	}
+	
+- The primary reason for covariant returns is to allow a caller to epect a more
+specific type of return than the one declared in the overridden method
+
+	Father dad = fatherRegistry.whosMyAncester("111111")
+ 	
+ 	
 
 
 
