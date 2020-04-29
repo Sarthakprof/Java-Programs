@@ -777,6 +777,23 @@ The three faces of "final"
 4. The string class is final. You cannot inherit from String and change its functionality
 
 5. Java Enum constants are implemented as static and final
+
+6. Switch case can use constants
+		- Now that we've learned about "final," we can add constants to our short list of valid case values.  Constants works because their value is known at compile time.  So the following is legal:
+
+		final char A_GRADE = 'A';
+		final char B_GRADE = 'B';
+		char studentGrade = 'A';
+		switch (studentGrade) {
+		    case A_GRADE:
+		        System.out.println("Student received an A");
+		        break;
+		    case B_GRADE:
+		        System.out.println("Student received a B");
+		        break;
+		    default:
+		        System.out.println("Student received a C or lower");
+		}
 	 	
 	 	
 	 	
