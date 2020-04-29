@@ -714,6 +714,69 @@ The three faces of "final"
 	 	- Final before a method makes it so the method cannot be overridden
 	 	- Final before a class makes that class un-extendable
 	 	
+1. To create a constant, just add the final modifier when you declare a variable
+	- final variables can be local(in a method) or a variable(static or instance) of a class
+	- Constants are usually static
+	- By convention, constant names are in uppercase. If needed, underscores are used to separate words
+	- If you have a constant instance variable you can set the value for that constant in the constructor or with explicit initialization 
+		example: 			 
+		 	public class FinalTest {
+		 		public static final int LESS_TRAVELED = 0; //explicit initialization
+		 		public final int SHORTEST;
+		 		public FinalTest() {
+		 				SHORTEST = 1; //constructor initialization
+		 			}
+		 		}
+	 - Final variables must be set before they are used
+	 - Trying to set a final outside of explicit initialization or in a constructor results in a compiler error.
+	 
+	 	example:
+		 	public class FinalTest {
+		 		public static final int LESS_TRAVELED = 0; //explicit initialization
+		 		public final int SHORTEST;
+		 		public foo() {
+		 				SHORTEST = 1; //COMPILE ERROR - cannot assign a value to final variable SHORTEST
+		 			}
+		 		}
+		 		
+2. When you place a final modifier in front of a method, that method can no longer be overriden.
+		example:
+			public class Father{
+				public final void drive(){
+					setVelocity(45);
+					setPath(LESS_TRAVELLED);
+					go();
+				}
+			}
+			
+			public class Son extends Father{
+				public final void drive(){ //ILLEGAL!! Results in compile time error
+					setVelocity(45);
+					setPath(SHORTEST);
+					go();
+				}
+			}
+			
+3. The last way to use the final modifier is to place it in front of a class
+	- Placing final in front of a class indicates the class should have no decendants
+	example:
+			public class Father{
+				public final void drive(){
+					setVelocity(45);
+					setPath(LESS_TRAVELLED);
+					go();
+				}
+			}
+			
+			public class Son extends Father{ //ILLEGAL!! Results in compile time error
+			.
+			.
+			.
+			}
+	
+4. The string class is final. You cannot inherit from String and change its functionality
+
+5. Java Enum constants are implemented as static and final
 	 	
 	 	
 	 	
