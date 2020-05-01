@@ -127,5 +127,3 @@ Second Instance Initialization String
 
 NOTE: If another Instructor object is instantiated, the static blocks would be skipped, since that only happens once during the life of the class.
 
-
-***********************POLYMORPHISM*********************
