@@ -12,6 +12,11 @@ public class CarDealership {
 		
 		Truck t = new Truck();
 		manager.addAutomobile(t);
+		
+		
+		//paret class
+		Automobile a = new Automobile();
+		manager.addAutomobile(a);
 	}
 
 }
