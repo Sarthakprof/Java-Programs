@@ -816,6 +816,18 @@ Polymorphism - many forms
  Person p = new Employee();
  
  
+ Person is reference type
+ Employee() is the object type
+ 
+ Person p = new Employee(); //is LEGAL
+ 
+ As long as the Object type is a descendant of the reference type, this is legal
+ 
+ Employee e = new Person(); //this is illegal
+ //Person is not a descendant of Employee
+ 
+ - Employee "is-a" Person, so it can be stored in a Person reference.
+ 
  	
 
 
