@@ -14,7 +14,7 @@ public class CarDealership {
 		manager.addAutomobile(t);
 		
 		
-		//paret class
+		//parent class
 		Automobile a = new Automobile();
 		manager.addAutomobile(a);
 	}

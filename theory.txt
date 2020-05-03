@@ -799,8 +799,23 @@ The three faces of "final"
 	 	
 
 ***********************POLYMORPHISM*********************
+Polymorphism - many forms
+
+- In programming, it means a class has the same interface or set of methods but different implementation
+- In a word, polymorphism is about substitutability. 
+- The principle provides OOP language like Java with extreme code flexibility.
 
  	
+ Polymorphism is the ability for any one object to be referred by several different types of references.
+ 
+ Example:
+ 
+ Employee e = new Employee();
+ Person p = e;
+ //or all on single line
+ Person p = new Employee();
+ 
+ 
  	
 
 
