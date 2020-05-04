@@ -829,7 +829,11 @@ Polymorphism - many forms
  - Employee "is-a" Person, so it can be stored in a Person reference.
  
  	
+Why use Polymorphis?
 
+	- Polymorphism promotes flexibilty and separation of concerns
+	- The power of polymorphism ties into the concept of overriding methods
+	
 
 
    
