@@ -834,7 +834,25 @@ Why use Polymorphis?
 	- Polymorphism promotes flexibilty and separation of concerns
 	- The power of polymorphism ties into the concept of overriding methods
 	
-
+To see another example of polymorphism, examine the simplified Person and Employee class below:
+	public class Person{
+		String firstName;
+		String lastName;
+		public String getDescription(){
+			System.out.println("In person");
+			return firstName + " " + lastName;
+			}
+		}
+		
+	public class Employee extends Person{
+		String title;
+		public String getDescription(){
+			System.out.println("In Employee");
+				return super.getDescription() + : " + title;
+		
+		}
+	
+	}
 
    
     
