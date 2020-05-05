@@ -853,8 +853,28 @@ To see another example of polymorphism, examine the simplified Person and Employ
 		}
 	
 	}
-
-   
+	
+	So, if we call like this in main:-
+	
+	Person p = new Employee();
+	System.out.println(p.getDescription);
+	
+	- Infact the Employee's getDescription() method will be called ! The Person's getDescription() method is called only because of the super.getDescription() call
+	- Assuming this Employee's name is "John Smith" and the title is "instructor", the following output would be result
+	
+	Output:-
+	
+	In Employee
+	In Person
+	John Smith Instructor
+	
+	- Even though the reference type is a Person, at runtime Java figures out which method is called based on the actual object type
+	
+ 	*- This is known as "Dynamic Method Dispatching"
+ 	- When the code runs the virtual machine looks for a definition of getDescription() in the object first
+ 	- Then the virtual machine traverses up the inheritence tree looking for the method in question
+ 	- This is why final methods execute faster. 
+ 	- There is no need to figure out dynamically where a method is defined
     
 
 			
