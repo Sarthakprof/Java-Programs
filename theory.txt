@@ -876,6 +876,16 @@ To see another example of polymorphism, examine the simplified Person and Employ
  	- This is why final methods execute faster. 
  	- There is no need to figure out dynamically where a method is defined
     
+At run =time a method call can be discovered, but at compile time the compiler
+must know that each method and instance variable will be available at runtime. 
+
+Person p = new Employee();
+p.title = "Instructor"; // ILLEGAL ! title is not defined in Person
+
+ - The above code is ILLEGAL
+ - At runtime the JVM known that the Person variable (p) refers to an Employee object
+ - However, at compile tie the java compiler does not know the real object type. It only knows "p" as a Person
+ - Therefore, the compiler checks for title against the reference type. Since its not a part of Person it fails.
 
 			
   
