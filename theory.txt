@@ -887,6 +887,12 @@ p.title = "Instructor"; // ILLEGAL ! title is not defined in Person
  - However, at compile tie the java compiler does not know the real object type. It only knows "p" as a Person
  - Therefore, the compiler checks for title against the reference type. Since its not a part of Person it fails.
 
+"being available to an object" is not the same as "being declared inside an object."  Let's say we have a subtype of Employee called Instructor.  If we create an Employee reference variable, we can call any member available to Employee - including those members it inherits.  For example:
+
+Employee e = new Instructor();
+e.setFirstName("Jane"); 
+... is legal because Employee inherits the setFirstName method from Person.  It wasn't declared inside Employee, but it was available to Employee.
+  So that's why I specifically say that a reference variable is limited to the members that are available to, rather than defined inside, the class itself.
 			
   
 	
