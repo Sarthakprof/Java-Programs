@@ -914,5 +914,15 @@ e.setFirstName("Jane");
  Person p = new Employee();
   System.out.println(p.getdesc());
   ((Employee) p).title = "Instructor";
+  
+  - Typecasting objects must handled with care, as it can be used incorrectly
+  
+  Person p = new Person();
+  Employee e = (Employee) p; //compiles but fails at runtime
+  
+  - In the case above the copiler does not check the object type so it allows this misguided cast
+  - at runtime this will fail, casting a Person object  to the EMployee type does npt make sense
+  - you cannot add functionality to an object that was not there to begin with
+  - The above code will generate a ClassCasException.
 				
 				
