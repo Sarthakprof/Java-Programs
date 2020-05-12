@@ -920,9 +920,31 @@ e.setFirstName("Jane");
   Person p = new Person();
   Employee e = (Employee) p; //compiles but fails at runtime
   
-  - In the case above the copiler does not check the object type so it allows this misguided cast
+  - In the case above the compiler does not check the object type so it allows this misguided cast
   - at runtime this will fail, casting a Person object  to the EMployee type does npt make sense
   - you cannot add functionality to an object that was not there to begin with
   - The above code will generate a ClassCasException.
-				
+
+  - To protect your casts at runtime use 'instanceOf' operator
+  - 'instanceOf' is a boolean operator
+  
+  if(p instanceOf Employee){
+  	  ((Employee) p).title = "Instructor";
+  	 }
+  		
+  - The instanceOf operator can be used not only to cast appropriately but to execute code conditionally
+  based on the type of market
+  
+  example:
+  
+  public class PayService {
+  	public void cutCheck(Employee e){
+  		double gross = e.pay();
+  		if(!(e instanceOf Manager)){
+  			...//award the special bonus
+  			
+  		}
+  		...//do the work of paying an employee
+  	}
+  }
 				
