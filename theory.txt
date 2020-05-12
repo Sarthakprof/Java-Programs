@@ -947,4 +947,49 @@ e.setFirstName("Jane");
   		...//do the work of paying an employee
   	}
   }
+  
+  ********************The Object Class*******************
+  
+  -> Two commonly overridden methods can further demonstrate polymorphism
+  	- The method toString() is used to convert objects to Strings
+  	- The method equals() is used to compare two objects
+  	- Both toString() and equals() are originally defined in the class java.lang.objects
+  	
+  -> Everything in Java (except primitives) "is a" object literally! That is, every class in Java eventually
+  extends java.lang.Object
+  	- If you don't extend a class as your parent you automatically extend java.lang.Object
+  	- Thus in the case of the Person class definition below 
+  	
+  	public class Person()
+  		- this is same as below
+  	public class Person() extends Object()
+  	
+  	- Therefore, every Java Object is an Object whether you like it or not
+  	
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 				
