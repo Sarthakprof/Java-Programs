@@ -894,7 +894,25 @@ e.setFirstName("Jane");
 ... is legal because Employee inherits the setFirstName method from Person.  It wasn't declared inside Employee, but it was available to Employee.
   So that's why I specifically say that a reference variable is limited to the members that are available to, rather than defined inside, the class itself.
 			
-  
-	
+			
+			
+*********************************Object Type Casting*******************
+
+ - Casting in primitive data types is used to force truncation of larger types such as int into smaller types such as byte
+ - With objects, casting is used to return an object to a more specific type
+ 
+ Example
+ 
+ Person p = new Employee();
+ System.out.println(p.getdesc());
+ Employee e (Employee) p;
+ e.title = "Instructor"; // legal beacause title is defined in Employee
+ 
+ - The typecast in this case is used to get functionality back into reference
+ - A typecast can also be done without creating another reference as shown in the code below. This too, adds functionality back into the reference
+ 
+ Person p = new Employee();
+  System.out.println(p.getdesc());
+  ((Employee) p).title = "Instructor";
 				
 				
