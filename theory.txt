@@ -965,6 +965,7 @@ e.setFirstName("Jane");
   	public class Person() extends Object()
   	
   	- Therefore, every Java Object is an Object whether you like it or not
+  	- every class inherits everything defined in objects
   	
   
   
