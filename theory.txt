@@ -967,6 +967,26 @@ e.setFirstName("Jane");
   	- Therefore, every Java Object is an Object whether you like it or not
   	- every class inherits everything defined in objects
   	
+  	
+ *******************Abstract Classes***********************
+ - Abstract classes allow a designer to generalize functionality of classes wothput providing implementation details
+ - This is useful when capturing similaraties between classes
+ - take for example, the rectangle and the circle classes:
+ 	
+ 		public class Circle{
+ 			public double c;
+ 			public double area(){
+ 				return Math PI*r*r;
+ 			}	
+ 			
+ 		public class Rectangle{
+ 			public double h, w;
+ 			public double area(){
+ 				return h*w;
+ 			}
+ 		}
+ 		}
+  	
   
   
   
