@@ -978,6 +978,7 @@ e.setFirstName("Jane");
  			public double area(){
  				return Math PI*r*r;
  			}	
+ 		}
  			
  		public class Rectangle{
  			public double h, w;
@@ -985,11 +986,37 @@ e.setFirstName("Jane");
  				return h*w;
  			}
  		}
+ 		
+ - Similarities such as the area() method, often indicate that classes like Rectangle and Circle should be related in some way
+ - the similarity here can be Generalised in a Shape uper class
+ - However , in doing so , you soon realize that there is no good way to define a generalized area method
+ 
+ 		public class Shape {
+ 			public double area() {...}
  		}
+  
+  // Circle extends Shape
+  // Rectangle extends Shape
+  
+  - Java allows developers to leave the definition or implementation of method off.
+  	- Use the abstract in front of the method name and include no code block to signify that the method is only a plcaeholder
+  	- Abstract methods have no implementation
   	
-  
-  
-  
+  	example:
+  	
+  		public abstract class Shape{
+  			public abstract double area();	
+  		}
+  		
+  	- Abstract classes can't be instantiated
+  		
+	  	new Shape(); //illegal
+	- Abstract classes can contain non-abstract methods
+	- Abstract classes are classes strictly designed to be extended	
+	
+	// Circle extends Shape
+  	// Rectangle extends Shape
+	  	
   
   
   
