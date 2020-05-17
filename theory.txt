@@ -1019,6 +1019,10 @@ e.setFirstName("Jane");
 	
 	// Circle extends Shape
   	// Rectangle extends Shape
+  	
+  	IMP: certain modifiers, such as private, static, and final cannot be used on an abstract method.  
+  	If you think about this logically, it makes sense.  Private, static, and/or final methods cannot be overridden, 
+  	and all abstract methods must be overridden.  Therefore these modifiers cannot appear in an abstract method declaration.
 	  	
   - 
   
