@@ -1001,6 +1001,9 @@ e.setFirstName("Jane");
   - Java allows developers to leave the definition or implementation of method off.
   	- Use the abstract in front of the method name and include no code block to signify that the method is only a plcaeholder
   	- Abstract methods have no implementation
+  	- Abstract methods cannot be instantiated, means no new w keyword
+  	- Descendent classes of an abstract class must implement the inherited abstract methods or become abstract themselves
+  	
   	
   	example:
   	
@@ -1017,8 +1020,7 @@ e.setFirstName("Jane");
 	// Circle extends Shape
   	// Rectangle extends Shape
 	  	
-  
-  
+  - 
   
   
   
