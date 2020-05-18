@@ -1024,8 +1024,19 @@ e.setFirstName("Jane");
   	If you think about this logically, it makes sense.  Private, static, and/or final methods cannot be overridden, 
   	and all abstract methods must be overridden.  Therefore these modifiers cannot appear in an abstract method declaration.
 	  	
-  - 
-  
+  ************************************Interfaces*****************************
+  An interface is a pseudo class
+  - Interfaces are defined in their own file with a java extension
+  - In this case, the interface would be found in a file called Drawable.java
+  - In the definition, replace the class keyword with the interface keyword
+  - Interfaces can only contain methods that are public and are one and only one of these types : abstract, default, or static
+  - Since the public modifier is implied, sometimes it is not present in the declaration
+  - Also, if the neither abstract, default, or static is listed in the declaration, it is set to abstract
+  - In addition to methods, interfaces can only contain variables that are public, static and float.
+  - these three modifiers are all implied, so they do not need to appear in the definition
+ Abstract interface methods follow the same rules as abstract methods in abstract classes
+  - Up until Java SE 8 this was the only type of method permitted in an interface
+  - With the release of Java SE 8,default and static methods were added to the language 
   
   
   
