@@ -34,7 +34,7 @@ Object Oriented Programming
  Features:
   - Abstraction
   - Inheritance
-  - Poly-Morphism
+  - Polymorphism
   
 
   Primitive Data Types
@@ -713,7 +713,7 @@ The three faces of "final"
 1. To create a constant, just add the final modifier when you declare a variable
 	- final variables can be local(in a method) or a variable(static or instance) of a class
 	- Constants are usually static
-	- By convention, constant names are in uppercase. If needed, underscores are used to separate words
+	- By convention, constant names are in upperclase. If needed, underscores are used to separate words
 	- If you have a constant instance variable you can set the value for that constant in the constructor or with explicit initialization 
 		example: 			 
 		 	public class FinalTest {
@@ -917,7 +917,7 @@ e.setFirstName("Jane");
   Employee e = (Employee) p; //compiles but fails at runtime
   
   - In the case above the compiler does not check the object type so it allows this misguided cast
-  - at runtime this will fail, casting a Person object  to the EMployee type does npt make sense
+  - at runtime this will fail, casting a Person object  to the EMployee type does not make sense
   - you cannot add functionality to an object that was not there to begin with
   - The above code will generate a ClassCasException.
 
@@ -965,7 +965,7 @@ e.setFirstName("Jane");
   	
   	
  *******************Abstract Classes***********************
- - Abstract classes allow a designer to generalize functionality of classes wothput providing implementation details
+ - Abstract classes allow a designer to generalize functionality of classes without providing implementation details
  - This is useful when capturing similarities between classes
  - take for example, the rectangle and the circle classes:
  	
@@ -984,7 +984,7 @@ e.setFirstName("Jane");
  		}
  		
  - Similarities such as the area() method, often indicate that classes like Rectangle and Circle should be related in some way
- - the similarity here can be Generalised in a Shape uper class
+ - the similarity here can be Generalized in a Shape upper class
  - However , in doing so , you soon realize that there is no good way to define a generalized area method
  
  		public class Shape {
@@ -995,7 +995,7 @@ e.setFirstName("Jane");
   // Rectangle extends Shape
   
   - Java allows developers to leave the definition or implementation of method off.
-  	- Use the abstract in front of the method name and include no code block to signify that the method is only a plcaeholder
+  	- Use the abstract in front of the method name and include no code block to signify that the method is only a placeholder
   	- Abstract methods have no implementation
   	- Abstract methods cannot be instantiated, means no new w keyword
   	- Descendent classes of an abstract class must implement the inherited abstract methods or become abstract themselves
