@@ -6,6 +6,11 @@ public class Person {
     private String name;
     private int age;
 
+    //constructor
+    public Person(String name){
+        this.name = name;
+    }
+
     //getter and setter for encapsulation
     public String getName() {
         return name;
@@ -23,8 +28,4 @@ public class Person {
         this.age = age;
     }
 
-
-    public Person(String name){
-        this.name = name;
-    }
 }

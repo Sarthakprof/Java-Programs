@@ -3,7 +3,6 @@ package com.sarthak.concept.constructors;
 public class God {
 
     public God(){
-
         System.out.print("Super class gods default constructor");
     }
 
