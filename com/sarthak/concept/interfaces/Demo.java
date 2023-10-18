@@ -9,5 +9,13 @@ public class Demo {
 
         B obj2 = new X();
         obj2.run();
+
+        Computer lap = new Laptop();
+
+        lap.code();
+
+        Computer desk = new Desktop();
+
+        desk.code();
     }
 }
