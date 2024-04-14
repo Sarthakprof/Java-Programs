@@ -1,6 +1,9 @@
 package com.sarthak.concept.collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class ArrayListDemo {
 
@@ -28,5 +31,23 @@ public class ArrayListDemo {
         arr.clear();
         System.out.println("ArrayList after clearing "+arr);
 
+
+        List<String> names = Arrays.asList("Suresh", "Mahesh", "Ganesh");
+        System.out.println("Iterate over arraylist using enhanced for loop");
+        //IterateOverArrayList using enhanced for loop
+        for (String name : names){
+            System.out.println(name);
+        }
+        System.out.println("Iterate over arraylist using foeach loop");
+        names.forEach(name -> System.out.println(name));
+
+        System.out.println("Iterate over arraylist using iterator");
+
+        Iterator<String> iterator = names.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.println("Iterate over arraylist using java 8 stream");
+        names.stream().forEach(System.out::println);
     }
 }
