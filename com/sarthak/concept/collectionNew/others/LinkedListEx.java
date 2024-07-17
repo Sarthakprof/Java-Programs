@@ -1,4 +1,4 @@
-package com.sarthak.concept.collectionNeew.others;
+package com.sarthak.concept.collectionNew.others;
 
 import java.util.LinkedList;
 

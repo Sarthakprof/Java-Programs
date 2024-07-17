@@ -1,9 +1,8 @@
-package com.sarthak.concept.collectionNeew.others;
+package com.sarthak.concept.collectionNew.others;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class HashtableEx {

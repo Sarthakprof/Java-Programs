@@ -1,4 +1,4 @@
-package com.sarthak.concept.collectionNeew;
+package com.sarthak.concept.collectionNew;
 
 import java.util.*;
 import java.util.stream.Collectors;
